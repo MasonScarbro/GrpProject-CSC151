@@ -18,6 +18,11 @@ public class House {
 	
 	public House(String style, double areaOfFamRoom, double areaOfLiving, double sizePlot, int numBedrooms){ 
 		
+		this.style = style;
+		this.areaOfFamRoom = areaOfFamRoom;
+		this.areaOfLiving = areaOfLiving;
+		this.sizePlot = sizePlot;
+		this.numBedrooms = numBedrooms;
 	}
 	
 	// Getter fo numBedrooms // 
