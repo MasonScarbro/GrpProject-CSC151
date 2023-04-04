@@ -2,14 +2,19 @@ package house;
 
 public class House {
 	private final int conversion = 43560;
-	private int numBedrooms = 0;
-	private double areaOfFamRoom = 0;
-	private double areaOfLiving = 0;
-	private double sizePlot = 0;
-	private String style = "";
+	private int numBedrooms;
+	private double areaOfFamRoom;
+	private double areaOfLiving;
+	private double sizePlot;
+	private String style;
 	
 	// no args constructor //
 	public House(){
+		numBedrooms = 0;
+		areaOfFamRoom = 0;
+		areaOfLiving = 0;
+		sizePlot = 0;
+		style = "";
 		
 	}
 	
@@ -83,7 +88,7 @@ public class House {
 	
 	// This is supposed to compare the houses total areas //
 	 
-	public int compareArea(House house1,House house2) {
+	public static int compareArea(House house1,House house2) {
 		if (house1.getTotalArea() < house2.getTotalArea()) {
 			return -1;
 			
@@ -99,11 +104,11 @@ public class House {
 	// NOTE: this should be called in the test class I think, the objects I assume will be declared in the test class to//
 	
 	// I was A little confused about this but this is supposed to return the string of the house params details //
-	public String toString(House houseOfChoice) {
-		return "House Style = " + houseOfChoice.getStyle() + "," + "Bedrooms = " + houseOfChoice.getNumBedrooms()
-		+  "," + "family Room area = " + houseOfChoice.getAreaOfFamRoom() + "," + "area of living = " + 
-		houseOfChoice.getAreaOfLiving() + "," +"plot size = " 
-		+ houseOfChoice.getSizePlot() + "," + "total area = " + houseOfChoice.getTotalArea(); 
+	public String toString() {
+		return "House Style = " + getStyle() + "," + "Bedrooms = " + getNumBedrooms()
+		+  "," + "family Room area = " + getAreaOfFamRoom() + "," + "area of living = " + 
+		getAreaOfLiving() + "," +"plot size = " 
+		+ getSizePlot() + "," + "total area = " + getTotalArea(); 
 		
 		
 	}
