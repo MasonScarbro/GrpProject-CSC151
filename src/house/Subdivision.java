@@ -2,6 +2,7 @@ package house;
 import java.util.ArrayList;
 import java.util.Collections;
 
+
 // ---NOTES--- //
 /* @get Think this is what he wants (theres already a java.lang get and add call so im a little confused) 
  * 
@@ -13,7 +14,8 @@ import java.util.Collections;
 public class Subdivision {
 
 	private ArrayList<House> houses = new ArrayList<>();
-		
+	
+	// Add a new house to the subdivision
 		public boolean add(House h) {
 			if (houses.add(h) == true) {
 				return true;
@@ -22,43 +24,61 @@ public class Subdivision {
 			} 
 		}
 		
-		//TO DO: add get(int i) Accessor to fetch the i th house added to the subdivision (zero origin).
+		// Accessor to fetch the i th house added to the subdivision (zero origin).
 		
 		public House get(int i) {
 			return houses.get(i);
 		}
 		
-		//TO DO: add java.util.ArrayList<House>	list() Accessor to return the list of all houses in the subdivision in the order in which they were added. //
+		//Accessor to return the list of all houses in the subdivision in the order in which they were added. //
 		
 		public java.util.ArrayList<House> list(){
 			return houses;
 		}
 		
-		//TO DO: add java.util.ArrayList<House>	listByArea (double floor, double ceiling)	Return a list of houses that are between a given number of square feet. //
+		//Return a list of houses that are between a given number of square feet. //
 		
 		public java.util.ArrayList<House> listByArea (double floor, double ceiling){
-			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getTotalArea() >= floor && h.getTotalArea() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
-		//TO DO: add java.util.ArrayList<House>	listByBedrooms (int floor, int ceiling)	Return a list of houses that have between the given number of bedrooms (inclusive). //
+		//Return a list of houses that have between the given number of bedrooms (inclusive). //
 		
 		public java.util.ArrayList<House> listByBedrooms (int floor, int ceiling){
-			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getNumBedrooms() >= floor && h.getNumBedrooms() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
-		//TO DO: add java.util.ArrayList<House>	listByPlot (double floor, double ceiling)	Return a list of houses whose associated plot of land is between two bounds (inclusive). //
+		//Return a list of houses whose associated plot of land is between two bounds (inclusive). //
 		
 		public java.util.ArrayList<House> listByPlot (double floor, double ceiling){
-			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getSizePlot() >= floor && h.getSizePlot() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
-		//TO DO: add int size()	The number of houses in the subdivision //
+		//Returns The number of houses in the subdivision //
 		
 		public int size() {
 			return houses.size();
 		}
 		
-		// java.util.ArrayList<House> sortByArea() A sorted list of all houses, ordered by the total area of the houses. //
+		//A sorted list of all houses, ordered by the total area of the houses. //
 	
 		public java.util.ArrayList<House> sortByArea(){
 			// for loop that iterates through each house (other than last)
@@ -75,7 +95,7 @@ public class Subdivision {
 			return houses;
 		}
 		
-		//add java.util.ArrayList<House> sortByPlot() A sorted list of all houses, ordered by plot acreage. //
+		//A sorted list of all houses, ordered by plot acreage. //
 	
 		public java.util.ArrayList<House> sortByPlor(){
 			// for loop that iterates through each house (other than last)
