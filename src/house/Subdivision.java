@@ -8,6 +8,8 @@ import java.util.Collections;
  * @add I don't know if this is right, confused about this being a boolean - Mason //
  * 
  * @BothSort()'s This Should be good, Removing TO DO - Mason //
+ 
+ * Remove areas that say Insert Code here, should be good - Giselle
  */
 
 public class Subdivision {
@@ -38,18 +40,39 @@ public class Subdivision {
 		
 		public java.util.ArrayList<House> listByArea (double floor, double ceiling){
 			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getTotalArea() >= floor && h.getTotalArea() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
 		//TO DO: add java.util.ArrayList<House>	listByBedrooms (int floor, int ceiling)	Return a list of houses that have between the given number of bedrooms (inclusive). //
 		
 		public java.util.ArrayList<House> listByBedrooms (int floor, int ceiling){
 			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getNumBedrooms() >= floor && h.getNumBedrooms() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
 		//TO DO: add java.util.ArrayList<House>	listByPlot (double floor, double ceiling)	Return a list of houses whose associated plot of land is between two bounds (inclusive). //
 		
 		public java.util.ArrayList<House> listByPlot (double floor, double ceiling){
 			// -INSERT CODE HERE- //
+			ArrayList<House> matchingHouses = new ArrayList<>();
+			for (House h : houses) {
+				if (h.getSizePlot() >= floor && h.getSizePlot() <= ceiling) {
+					matchingHouses.add(h);
+				}
+			}
+			return matchingHouses;
 		}
 		
 		//TO DO: add int size()	The number of houses in the subdivision //
