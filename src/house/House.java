@@ -1,4 +1,38 @@
+// Isaac's Editing Test
+
 package house;
+// Isaac added importing of ArrayList and added the Subdivision class we will be working on. I also manually added TO DO comments //
+import java.util.ArrayList;
+
+// This is what we will be working with this week -Isaac //
+class Subdivision{
+	private ArrayList<House> houses = new ArrayList<>();
+	
+	//TO DO: add boolean add(House h) Add a house to the subdivision //
+	
+	//TO DO: add get(int i) Accessor to fetch the i th house added to the subdivision (zero origin).
+	
+	//TO DO: add java.util.ArrayList<House>	list() Accessor to return the list of all houses in the subdivision in the order in which they were added. //
+	
+	//TO DO: add java.util.ArrayList<House>	listByArea (double floor, double ceiling)	Return a list of houses that are between a given number of square feet. //
+	
+	//TO DO: add java.util.ArrayList<House>	listByBedrooms (int floor, int ceiling)	Return a list of houses that have between the given number of bedrooms (inclusive). //
+	
+	//TO DO: add java.util.ArrayList<House>	listByPlot (double floor, double ceiling)	Return a list of houses whose associated plot of land is between two bounds (inclusive). //
+	
+	//TO DO: add int	size()	The number of houses in the subdivision //
+
+	//TO DO: add java.util.ArrayList<House>	sortByArea()	A sorted list of all houses, ordered by the total area of the houses. //
+	
+	//TO DO: add java.util.ArrayList<House>	sortByPlot()	A sorted list of all houses, ordered by plot acreage. //
+	
+	// More instructioins can be found for each individual method in the Subdivision.html folder -Isaac //
+	
+}
+
+// TO DO: Test the methods added to Subdivision class //
+// NOT Tested with SubdivisionTester //
+// NOT Tested with SanityCheckerVersion2 //
 
 public class House {
 	private final int conversion = 43560;
