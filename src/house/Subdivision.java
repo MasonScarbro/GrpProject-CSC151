@@ -9,8 +9,6 @@ import java.util.Collections;
  * @add I don't know if this is right, confused about this being a boolean - Mason //
  * 
  * @BothSort()'s This Should be good, Removing TO DO - Mason //
- 
- * Remove areas that say Insert Code here, should be good - Giselle
  */
 
 public class Subdivision {
@@ -41,10 +39,6 @@ public class Subdivision {
 		//Return a list of houses that are between a given number of square feet. //
 		
 		public java.util.ArrayList<House> listByArea (double floor, double ceiling){
-<<<<<<< HEAD
-=======
-			// -INSERT CODE HERE- //
->>>>>>> 8a0b08a9faa4e72a186a14a715425208714623a7
 			ArrayList<House> matchingHouses = new ArrayList<>();
 			for (House h : houses) {
 				if (h.getTotalArea() >= floor && h.getTotalArea() <= ceiling) {
@@ -57,10 +51,6 @@ public class Subdivision {
 		//Return a list of houses that have between the given number of bedrooms (inclusive). //
 		
 		public java.util.ArrayList<House> listByBedrooms (int floor, int ceiling){
-<<<<<<< HEAD
-=======
-			// -INSERT CODE HERE- //
->>>>>>> 8a0b08a9faa4e72a186a14a715425208714623a7
 			ArrayList<House> matchingHouses = new ArrayList<>();
 			for (House h : houses) {
 				if (h.getNumBedrooms() >= floor && h.getNumBedrooms() <= ceiling) {
@@ -73,10 +63,6 @@ public class Subdivision {
 		//Return a list of houses whose associated plot of land is between two bounds (inclusive). //
 		
 		public java.util.ArrayList<House> listByPlot (double floor, double ceiling){
-<<<<<<< HEAD
-=======
-			// -INSERT CODE HERE- //
->>>>>>> 8a0b08a9faa4e72a186a14a715425208714623a7
 			ArrayList<House> matchingHouses = new ArrayList<>();
 			for (House h : houses) {
 				if (h.getSizePlot() >= floor && h.getSizePlot() <= ceiling) {
