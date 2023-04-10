@@ -101,14 +101,12 @@ public class House {
 			return 0;
 		}
 	}
-	// NOTE: this should be called in the test class I think, the objects I assume will be declared in the test class to//
-	
-	// I was A little confused about this but this is supposed to return the string of the house params details //
+		// I was A little confused about this but this is supposed to return the string of the house params details //
 	public String toString() {
-		return "House Style = " + getStyle() + "," + "Bedrooms = " + getNumBedrooms()
-		+  "," + "family Room area = " + getAreaOfFamRoom() + "," + "area of living = " + 
-		getAreaOfLiving() + "," +"plot size = " 
-		+ getSizePlot() + "," + "total area = " + getTotalArea(); 
+		return "House Style = " + getStyle() + "," + " Bedrooms = " + getNumBedrooms()
+		+  "," + " family Room area = " + getAreaOfFamRoom() + "," + " area of living = " + 
+		getAreaOfLiving() + "," +" plot size = " 
+		+ getSizePlot() + "," + " total area = " + getTotalArea(); 
 		
 		
 	}
