@@ -53,7 +53,7 @@ public class Subdivision {
 		public java.util.ArrayList<House> listByBedrooms (int floor, int ceiling){
 			ArrayList<House> matchingHouses = new ArrayList<>();
 			for (House h : houses) {
-				if (h.getNumBedrooms() >= floor && h.getNumBedrooms() <= ceiling) {
+				if (h.getBedrooms() >= floor && h.getBedrooms() <= ceiling) {
 					matchingHouses.add(h);
 				}
 			}
@@ -65,7 +65,7 @@ public class Subdivision {
 		public java.util.ArrayList<House> listByPlot (double floor, double ceiling){
 			ArrayList<House> matchingHouses = new ArrayList<>();
 			for (House h : houses) {
-				if (h.getSizePlot() >= floor && h.getSizePlot() <= ceiling) {
+				if (h.getPlot() >= floor && h.getPlot() <= ceiling) {
 					matchingHouses.add(h);
 				}
 			}
@@ -101,7 +101,7 @@ public class Subdivision {
 			// for loop that iterates through each house (other than last)
 			for (int i = 0; i < houses.size() - 1; i++) {
 				// checks if the 'current' house plot is  greater than the next
-				if (houses.get(i).getSizePlot() > houses.get(i + 1).getSizePlot()) {
+				if (houses.get(i).getPlot() > houses.get(i + 1).getPlot()) {
 					// if it is swap the two places 
 					Collections.swap(houses, i, i + 1);
 					
@@ -110,6 +110,18 @@ public class Subdivision {
 				
 			}
 			return houses;
+		}
+		
+		public House find(String style) {
+			House houseStyle = null;
+			for (int i = 0; i < houses.size(); i++) {
+				if (houses.get(i).getStyle() == style) {
+					houseStyle = houses.get(i);
+				} else {
+					break;
+				}
+			}
+			return houseStyle;
 		}
 	
 }
