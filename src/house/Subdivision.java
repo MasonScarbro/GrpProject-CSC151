@@ -97,7 +97,7 @@ public class Subdivision {
 		
 		//A sorted list of all houses, ordered by plot acreage. //
 	
-		public java.util.ArrayList<House> sortByPlor(){
+		public java.util.ArrayList<House> sortByPlot(){
 			// for loop that iterates through each house (other than last)
 			for (int i = 0; i < houses.size() - 1; i++) {
 				// checks if the 'current' house plot is  greater than the next
