@@ -30,7 +30,7 @@ public class House {
 	// Constructor Taking the Arguments Style, family room size, living room size, plot size, and number of bedrooms //
 	// NOTE: The plot size is in acres so if we end up doing a total we have to convert that to feet //
 	
-	public House(String style, double familyRoomArea, double livingRoomArea, int bedrooms,double plot){ 
+	public House(String style, double familyRoomArea, double livingRoomArea, int bedrooms, double plot){ 
 		
 		this.style = style;
 		this.familyRoomArea = familyRoomArea;
@@ -112,10 +112,7 @@ public class House {
 	}
 		// I was A little confused about this but this is supposed to return the string of the house params details //
 	public String toString() {
-		return "House Style = " + getStyle() + "," + " Bedrooms = " + getBedrooms()
-		+  "," + " family Room area = " + getFamilyRoomArea() + "," + " area of living = " + 
-		getLivingRoomArea() + "," +" plot size = " 
-		+ getPlot() + "," + " total area = " + getTotalArea(); 
+		return  getStyle() +  "," + getFamilyRoomArea() + "," + getLivingRoomArea() + "," + getBedrooms() + "," + getPlot(); 
 		
 		
 	}

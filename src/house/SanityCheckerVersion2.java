@@ -5,7 +5,7 @@ public class SanityCheckerVersion2 {
 	
 	public static void main(String[] args) {
 		House other = new House();
-		House small = new House("small", 3.1, 0.2, 0, .3);
+		House small = new House("small", 3.1, 0.2, 1, 0.3);
 		int g = small.compareArea(other);
 		int a = small.getBedrooms();
 		double b = small.getFamilyRoomArea();
